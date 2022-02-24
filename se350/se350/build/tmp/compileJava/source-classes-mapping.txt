@@ -10,8 +10,14 @@ NullException.java
  NullException
 CommercialFlight.java
  CommercialFlight
+AirlineFactory.java
+ AirlineFactory
+AirlineName.java
+ AirlineName
 FlightFactory.java
  FlightFactory
+PassengerFlight.java
+ PassengerFlight
 FlightManager.java
  FlightManager
 TravelManager.java
