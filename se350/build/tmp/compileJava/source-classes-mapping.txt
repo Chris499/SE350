@@ -1,12 +1,28 @@
-Flight.java
- Flight
 Airline.java
  Airline
-FormatException.java
- FormatException
-Airport.java
- Airport
+Flight.java
+ Flight
+AirlineFactory.java
+ AirlineFactory
 NullException.java
  NullException
+FormatException.java
+ FormatException
+AirportFactory.java
+ AirportFactory
+CommercialFlight.java
+ CommercialFlight
+FlightFactory.java
+ FlightFactory
+FlightManager.java
+ FlightManager
+Airport.java
+ Airport
+RealFlightManager.java
+ RealFlightManager
+ProxyFlightManager.java
+ ProxyFlightManager
 TravelManager.java
  TravelManager
+PassengerFlight.java
+ PassengerFlight

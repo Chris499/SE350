@@ -1,21 +1,25 @@
 import java.util.Objects;
 public class Airline {
     private String name;
+
     public Airline(String name) throws NullException, FormatException {
         SetName(name);
     }
-    public String getName(){
+
+    public String getName() {
         return name;
     }
-    public void SetName(String TheName) throws NullException, FormatException{
-        if(TheName == null) {
-            throw new NullException("Null argument used in setName");
-    }
-        if(TheName.length() > 8){
+
+    public void SetName(String TheName) throws NullException, FormatException {
+        if (TheName == null) {
+            throw new NullException("No null name");
+        }
+        if (TheName.length() > 8) {
             throw new FormatException("Name length exceeds max length");
         }
         name = TheName;
     }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -24,22 +28,16 @@ public class Airline {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == null || (getClass() != obj.getClass())) {
-            return false;
-        }
-        final Airline other = (Airline) obj;
-        if (!getName().equals(other.getName())) {
-            return false;
-        }
-        return true;
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Airline airline = (Airline) o;
+        return Objects.equals(name, airline.name);
     }
 
     @Override
     public int hashCode() {
-
         return Objects.hash(name);
     }
-
 }
 
